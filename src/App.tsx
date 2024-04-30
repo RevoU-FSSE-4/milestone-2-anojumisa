@@ -1,14 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import NewsList from './components/NewsList';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Main from "./Components/Main";
+
 
 function App() {
-  return (
-    <div className="App">
-      <NewsList />
-    </div>
-  );
+	return (
+		<div className="App">
+			<Main />
+		</div>
+	);
 }
 
 export default App;
