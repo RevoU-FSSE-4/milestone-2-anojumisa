@@ -1,21 +1,21 @@
 import React from "react";
 import RightSection from "./RightSection";
 import LeftSection from "./LeftSection";
-import SearchFeature from "./SearchFeature";
+
 
 type newsProp = {
-    news: any
-}
+  news: any;
+};
 
-
-const Home = (props:newsProp) => {
-    return (
-        <div >
-            
-            <LeftSection  news={props?.news} />
-            <RightSection news={props?.news} />
-        </div>
-    )
-}
+const Home: React.FC<newsProp> = (props) => {
+  return (
+    <div>
+      <LeftSection urlToImage={""} title={""} source={{
+        name: ""
+      }} publishedAt={""} description={""} url={""} />
+      <RightSection news={props?.news} />
+    </div>
+  );
+};
 
 export default Home;

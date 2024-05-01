@@ -22,7 +22,7 @@ const Main = () => {
 
 	return (
 		<div>
-			<Navbar />
+			
 			<Home news={news}/>
 		</div>
 	);

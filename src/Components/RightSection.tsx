@@ -7,7 +7,7 @@ const RightSection = (props: newsProp) => {
 	const topNews = props.news.slice(0, 10);
 	return (
 		<div className="">
-			<h1>TOP NEWS</h1>
+			<h1 className="text-2xl font-extrabold text-center">TOP NEWS</h1>
 			<ul className="flex flex-row flex-wrap max-w text-m text-gray-500 dark:text-gray-400 list-outside">
 				{topNews.map(
 					(

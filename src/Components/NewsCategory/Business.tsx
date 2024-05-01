@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";  
 
-interface NewsData {
-	urlToImage: string;
+
+const url = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=19d2d58149474e4cb08304a83cbe8ffc";
+type NewsData = {
+    urlToImage: string;
 	title: string;
 	source: {
 	  name: string;
@@ -9,15 +11,14 @@ interface NewsData {
 	publishedAt: string;
 	description: string;
 	url: string;
-  }
-  const LeftSection = (props: NewsData) => {
+  };
+  const Business = (props: NewsData) => {
 	const [news, setNews] = useState([]);
 
-	const getNews = async () => {
+    const getNews = async () => {
 		try {
 			const response = await fetch(
-				"https://newsapi.org/v2/top-headlines?country=us&category=politics&apiKey=19d2d58149474e4cb08304a83cbe8ffc"
-			);
+				url);
 			const json = await response.json();
 			setNews(json.articles);
 		} catch (error) {
@@ -28,8 +29,7 @@ interface NewsData {
 	useEffect(() => {
 		getNews();
 	}, []);
-
-	return (
+    return (
 		<div className="flex flex-row flex-wrap mt-4">
 			{news.map(
 				(
@@ -82,6 +82,6 @@ interface NewsData {
 			)}
 		</div>
 	);
-};
+}
 
-export default LeftSection;
+export default Business;
