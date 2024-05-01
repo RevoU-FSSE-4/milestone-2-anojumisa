@@ -9,6 +9,7 @@ interface NewsData {
 	publishedAt: string;
 	description: string;
 	url: string;
+	
   }
   const LeftSection = (props: NewsData) => {
 	const [news, setNews] = useState([]);

@@ -12,7 +12,7 @@ const Home: React.FC<newsProp> = (props) => {
     <div>
       <LeftSection urlToImage={""} title={""} source={{
         name: ""
-      }} publishedAt={""} description={""} url={""} />
+      }} publishedAt={""} description={""} url={""}/>
       <RightSection news={props?.news} />
     </div>
   );

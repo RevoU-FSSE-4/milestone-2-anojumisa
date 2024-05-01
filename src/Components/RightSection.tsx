@@ -4,11 +4,12 @@ type newsProp = {
 	news: any;
 };
 const RightSection = (props: newsProp) => {
-	const topNews = props.news.slice(0, 10);
+	
+	const topNews = props.news?.slice(0, 5);
 	return (
 		<div className="">
-			<h1 className="text-2xl font-extrabold text-center">TOP NEWS</h1>
-			<ul className="flex flex-row flex-wrap max-w text-m text-gray-500 dark:text-gray-400 list-outside">
+			<h1 className="text-2xl font-extrabold text-left">TOP NEWS</h1>
+			<ul className="flex  max-w text-m text-gray-500 dark:text-gray-400 list-outside">
 				{topNews.map(
 					(
 						data: {
@@ -19,27 +20,15 @@ const RightSection = (props: newsProp) => {
 					) => (
 						<li
 							key={index}
-							className="font-semibold text-left text-gray-900 dark:text-black"
+							className="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box font-semibold text-left text-gray-900 dark:text-black"
 						><a href={data.url}>
-							{(index as number) + 1}. {data.title} {/* Type assertion */}
+							<span className="text-3xl text-red-700">{(index as number) + 1}</span>. {data.title} {/* Type assertion */}
 							</a>
 						</li>
 					)
 				)}
 			</ul>
 		</div>
-		//    <div className="w-56">
-		//         <h1>TOP NEWS</h1>
-		//         {props?.news?.map((data:any) => {
-		//             return <>
-		//             <ul className=" max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
-
-		//                 <li className="font-semibold text-left text-gray-900 dark:text-black text-pretty">{data?.title}</li>
-		//             </ul>
-		//             <br className="mt-4"/>
-		//             </>
-		//         })}
-		//    </div>
 	);
 };
 
