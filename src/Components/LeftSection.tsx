@@ -8,7 +8,7 @@ const LeftSection = (props: newsProp) => {
 	console.log(props);
 
 	return (
-		<div>
+		<div className="flex flex-row flex-wrap mt-4">
 			{props?.news?.map((data: any) => {
 				const dateString = data.publishedAt.substring(0, 10);
 				const date = new Date(dateString);
@@ -18,11 +18,11 @@ const LeftSection = (props: newsProp) => {
 				)} ${date.getFullYear()}`;
 
 				return (
-					<>
+					<div >
 						<ul className="">
-							<li>
-								<div className=" flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
-									<div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+							<li className="">
+								<div className=" flex flex-col mt-6 mx-1 my-4 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96 ">
+									<div className=" mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
 										<img src={data?.urlToImage} alt={data?.title} />
 									</div>
 									<div className="flex justify-around">
@@ -50,7 +50,7 @@ const LeftSection = (props: newsProp) => {
 								</div>
 							</li>
 						</ul>
-					</>
+					</div>
 				);
 			})}
 		</div>

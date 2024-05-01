@@ -6,16 +6,23 @@ type newsProp = {
 const RightSection = (props: newsProp) => {
 	const topNews = props.news.slice(0, 10);
 	return (
-		<div className="w-56">
+		<div className="">
 			<h1>TOP NEWS</h1>
-			<ul className="max-w-md space-y-1 text-gray-500 dark:text-gray-400">
+			<ul className="flex flex-row max-w  space-y-1 text-gray-500 dark:text-gray-400 list-inside">
 				{topNews.map(
-					(data: { title: string }, index: React.Key | null | undefined) => (
+					(
+						data: {
+							url: string | undefined;
+							title: string;
+						},
+						index: React.Key | null | undefined
+					) => (
 						<li
 							key={index}
-							className="font-semibold text-left text-gray-900 dark:text-black text-pretty list-outside"
-						>
+							className="font-semibold text-left text-gray-900 dark:text-black"
+						><a href={data.url}>
 							{(index as number) + 1}. {data.title} {/* Type assertion */}
+							</a>
 						</li>
 					)
 				)}

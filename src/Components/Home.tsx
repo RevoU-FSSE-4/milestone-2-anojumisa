@@ -9,8 +9,8 @@ type newsProp = {
 
 const Home = (props:newsProp) => {
     return (
-        <div className="flex justify-between">
-            <LeftSection  news={props?.news}/>
+        <div >
+            <LeftSection  news={props?.news} />
             <RightSection news={props?.news} />
         </div>
     )
