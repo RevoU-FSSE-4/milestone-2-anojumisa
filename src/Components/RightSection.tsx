@@ -8,7 +8,7 @@ const RightSection = (props: newsProp) => {
 	return (
 		<div className="">
 			<h1>TOP NEWS</h1>
-			<ul className="flex flex-row max-w  space-y-1 text-gray-500 dark:text-gray-400 list-inside">
+			<ul className="flex flex-row flex-wrap max-w text-m text-gray-500 dark:text-gray-400 list-outside">
 				{topNews.map(
 					(
 						data: {
