@@ -11,9 +11,9 @@ type newsProp = {
 const Home = (props:newsProp) => {
     return (
         <div >
-            <SearchFeature  />
-            {/* <LeftSection  news={props?.news} />
-            <RightSection news={props?.news} /> */}
+            
+            <LeftSection  news={props?.news} />
+            <RightSection news={props?.news} />
         </div>
     )
 }
