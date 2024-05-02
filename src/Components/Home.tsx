@@ -3,6 +3,7 @@ import RightSection from "./RightSection";
 import LeftSection from "./LeftSection";
 import Subscription from "./Subscription";
 import Footer from "./Footer";
+import SearchResultsList from "./SearchResultsList";
 
 type newsProp = {
   news: any;
@@ -11,6 +12,7 @@ type newsProp = {
 const Home: React.FC<newsProp> = (props) => {
   return (
     <div>
+      <SearchResultsList articles={[]} />
       <RightSection news={props?.news} />
       <LeftSection urlToImage={""} title={""} source={{
         name: ""

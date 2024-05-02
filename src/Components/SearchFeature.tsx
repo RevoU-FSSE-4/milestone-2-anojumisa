@@ -1,29 +1,20 @@
 import React, { useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import axios from "axios";
 
-const SearchFeature = () => {
-	const [input, setInput] = useState("");
+interface SearchProps {
+	onSearch: (query: string) => void;
+}
+const SearchFeature: React.FC<SearchProps> = ({ onSearch }) => {
+	const [searchTerm, setSearchTerm] = useState("");
 
-	const fetchData = (value: React.SetStateAction<string>) => {
-		fetch(
-			"https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=19d2d58149474e4cb08304a83cbe8ffc"
-		)
-			.then((response) => response.json())
-			.then((json) => {
-				const results = json.articles.filter((article: any) =>
-					article.title.toLowerCase().includes(value)
-				);
-				console.log(results);
-			});
-	};
-
-	const handleChange = (value: React.SetStateAction<string>) => {
-		setInput(value);
-		fetchData(value);
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		onSearch(searchTerm);
+		setSearchTerm(""); 
 	};
 	return (
 		<div>
-			<form className=" ">
+			<form onSubmit={handleSubmit}>
 				<label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
 					Search
 				</label>
@@ -46,11 +37,11 @@ const SearchFeature = () => {
 						</svg>
 					</div>
 					<input
-						type="search"
-						id="default-search"
+						type="text"
 						className="p-4 ps-10 text-sm text-gray-100 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-yellow-600 dark:border-gray-600 dark:placeholder-gray-300 dark:text-red dark:focus:ring-blue-500 dark:focus:border-blue-500"
 						placeholder="Search news..."
-						onChange={(e) => handleChange(e.target.value)}
+						value={searchTerm}
+						onChange={(e) => setSearchTerm(e.target.value)}
 					/>
 					<button
 						type="submit"
