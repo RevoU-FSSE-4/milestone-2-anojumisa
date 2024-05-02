@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Subscription = () => {
+interface SubscriptionProps {}
+
+const Subscription: React.FC<SubscriptionProps> = () => {
+	const [showModal, setShowModal] = useState(false);
+
+	const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault(); 
+		setShowModal(true); 
+	};
+
+	const handleCloseModal = () => {
+		setShowModal(false);
+	};
+
 	return (
 		<div className="flex flex-col justify-between my-5">
 			<h1 className="self-center text-2xl font-semibold whitespace-nowrap my-4 dark:text-black">
@@ -8,14 +21,13 @@ const Subscription = () => {
 			</h1>
 			<h2>Let's subscribe so you don't miss the latest updates!</h2>
 			<div className="my-4">
-				<form className="max-w-md mx-auto">
+				<form className="max-w-md mx-auto" onSubmit={handleSubscribe}>
 					<label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
 						Search
 					</label>
 					<div className="relative">
-						
 						<input
-							type="search"
+							type="email" 
 							id="default-search"
 							className="block w-full p-4 ps-10 text-sm text-gray-200 border border-gray-100 rounded-lg bg-gray-10 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
 							placeholder="Your email..."
@@ -30,6 +42,26 @@ const Subscription = () => {
 					</div>
 				</form>
 			</div>
+			{showModal && (
+				<div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center">
+					<div className="bg-white rounded-lg p-8 shadow-md">
+						<h3 className="text-xl font-semibold mb-4">
+							Thank you for subscribing!
+						</h3>
+						<p className="text-gray-700">
+							You will now receive email updates from AJ News.
+						</p>
+						<button
+							className="text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+							onClick={handleCloseModal} 
+						>
+							Close
+						</button>
+					</div>
+					
+					<div className="absolute inset-0" onClick={handleCloseModal} />
+				</div>
+			)}
 		</div>
 	);
 };
