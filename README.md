@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+# AJ News App - Milestone 2 (RevoU Bootcamp)
+AJ News App is a milestone 2 project developed during the RevoU bootcamp. It’s a news application that allows users to explore news articles, filter by category, and search for specific topics. The app is built using React, TypeScript, and integrates with a news API.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features:
 
-## Available Scripts
+### News Display:
+News articles are fetched from the News API and displayed on the Home Page, Category Pages, and Search Results Page.
+Users can choose which news they want to see based on:
+Category: Navigate through different categories using React Router.
+Search: Search for news based on keywords using a dedicated search section.
+Styling: Tailwind CSS is used for styling the application.
 
-In the project directory, you can run:
+### Subscription:
+A subscription section allows users to enter their email address.
+Upon submitting the form, a modal popup made with React Modal appears, thanking the user for subscribing.
 
-### `npm start`
+## Technology Stack:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Frontend: React, Typescript
+Styling: Tailwind CSS
+Routing: React Router
+API: News API
+Modals: React Modal 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Made with &hearts; by Ano Jumisa
