@@ -20,9 +20,9 @@ const RightSection = (props: newsProp) => {
 					) => (
 						<li
 							key={index}
-							className="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box font-semibold text-left text-gray-900 dark:text-black hover:bg-yellow-700 rounded-md mt-3"
+							className="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box font-semibold text-left text-gray-900 dark:text-black hover:bg-yellow-700 hover:text-gray-300 rounded-md mt-3"
 						><a href={data.url}>
-							<span className="text-3xl text-red-700">{(index as number) + 1}</span>. {data.title} {/* Type assertion */}
+							<span className="text-3xl text-red-700">{(index as number) + 1}. </span> {data.title} {/* Type assertion */}
 							</a>
 						</li>
 					)
