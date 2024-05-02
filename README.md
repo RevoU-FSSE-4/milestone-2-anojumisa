@@ -14,12 +14,12 @@ Styling: Tailwind CSS is used for styling the application.
 A subscription section allows users to enter their email address.
 Upon submitting the form, a modal popup made with React Modal appears, thanking the user for subscribing.
 
-## Technology Stack:
+## Tech-Stack:
 
-Frontend: React, Typescript
-Styling: Tailwind CSS
-Routing: React Router
-API: News API
-Modals: React Modal 
+- Frontend: React, Typescript
+- Styling: Tailwind CSS
+- Routing: React Router
+- API: News API
+- Modals: React Modal 
 
 #### Made with &hearts; by Ano Jumisa
