@@ -111,7 +111,7 @@ const Footer = () => {
 				</div>
 				<div className="w-full bg-black/5 p-4 text-center">
 					© 2024 Copyright:
-					<a href="https://github.com/anojumisa"> AJ News</a>
+					<a href="https://github.com/anojumisa"> Ano Jumisa</a>
 				</div>
 			</footer>
 		</div>
