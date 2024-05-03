@@ -4,10 +4,13 @@ interface SubscriptionProps {}
 
 const Subscription: React.FC<SubscriptionProps> = () => {
 	const [showModal, setShowModal] = useState(false);
+	const [email, setEmail] = useState("");
 
 	const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault(); 
-		setShowModal(true); 
+		e.preventDefault();
+		localStorage.setItem("email", email);
+		setShowModal(true);
+		setEmail("");
 	};
 
 	const handleCloseModal = () => {
@@ -27,11 +30,13 @@ const Subscription: React.FC<SubscriptionProps> = () => {
 					</label>
 					<div className="relative">
 						<input
-							type="email" 
+							type="email"
 							id="default-search"
 							className="block w-full p-4 ps-10 text-sm text-gray-200 border border-gray-100 rounded-lg bg-gray-10 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
 							placeholder="Your email..."
 							required
+							value={email}
+							onChange={(e) => setEmail(e.target.value)}
 						/>
 						<button
 							type="submit"
@@ -53,12 +58,12 @@ const Subscription: React.FC<SubscriptionProps> = () => {
 						</p>
 						<button
 							className="text-white bg-red-500 hover:bg-blue-700 focus:ring-4 my-5 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-red-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-							onClick={handleCloseModal} 
+							onClick={handleCloseModal}
 						>
 							Close
 						</button>
 					</div>
-					
+
 					<div className="absolute inset-0" onClick={handleCloseModal} />
 				</div>
 			)}
