@@ -31,7 +31,11 @@ interface NewsData {
 	}, []);
 
 	return (
+		<div>
+
+		<h1 className="text-4xl text-red-700 font-extrabold text-center underline">Top Stories You Need to Know</h1>
 		<div className="flex flex-row flex-wrap mt-4">
+			
 			{news.map(
 				(
 					data: NewsData,
@@ -81,6 +85,7 @@ interface NewsData {
 					</div>
 				)
 			)}
+		</div>
 		</div>
 	);
 };

@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
 
 	const handleSearch = (query: string) => {
 		setSearchTerm(query);
-		const url = `https://newsapi.org/v2/everything?q=${query}&from=2024-04-02&sortBy=publishedAt&apiKey=${apiKey}`;
+		const url = `https://newsapi.org/v2/everything?q=${query}&sortBy=publishedAt&apiKey=${apiKey}`;
 		axios
 			.get(url)
 			.then((response) => setArticles(response.data.articles))
