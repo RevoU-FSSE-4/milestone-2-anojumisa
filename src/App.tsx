@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Politics from "./Components/NewsCategory/Politics";
 import Entertainment from "./Components/NewsCategory/Entertainment";
 import Business from "./Components/NewsCategory/Business";
+import NotFound from "./Components/NotFound";
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 
 			<Routes>
 				<Route path="/" element={<Main />} />
+				<Route path="*" element={<NotFound />} />
 				<Route path="/politics" element={<Politics urlToImage={""} title={""} source={{
 					name: ""
 				}} publishedAt={""} description={""} url={""} />} />

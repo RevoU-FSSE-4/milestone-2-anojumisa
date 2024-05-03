@@ -66,6 +66,7 @@ const Navbar: React.FC = () => {
 								Business
 							</Link>
 						</li>
+						
 					</ul>
 					{/* <SearchFeature /> */}
 					<div className="App">
