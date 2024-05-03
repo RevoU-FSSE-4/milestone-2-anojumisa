@@ -32,9 +32,9 @@ const Headline = () => {
 	}, []);
 
 	return (
-		<div className="w-full mx-1 my-6 text-left bg-white rounded-xl shadow-md overflow-hidden md:w-full">
+		<div className="w-full  mx-1 my-6 text-left bg-white rounded-xl shadow-md overflow-hidden md:w-full">
 			{news && (
-				<div className="md:flex">
+				<div className="md:flex justify-center">
 					<div className="md:shrink-0">
 						<img
 							className="h-20 w-full object-cover md:h-full md:w-60 rounded-lg"
