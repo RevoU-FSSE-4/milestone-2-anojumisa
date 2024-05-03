@@ -16,7 +16,7 @@ Users can choose a category from the navbar to navigate to a dedicated page disp
 ![Page navigation - category "Technology"](/public/images/category-2.png)
 
 ## Search for specific topics 
-A dedicated search section allows users to search for news based on keywords entered in the search bar. The search results are filtered using JavaScript's slice method to display only the top 5 results.
+A dedicated search section allows users to search for news based on keywords entered in the search bar. The search results are filtered using ```JavaScript's slice method``` to display only the top 5 results.
 
 ![Search bar](/public/images/search-bar.png)
 
@@ -38,8 +38,8 @@ The email being stored in the local storage:
 ## Tech-Stack:
 
 - Frontend: React, Typescript
-- Styling: Tailwind CSS
-- Routing: React Router
+- Styling: [Tailwind CSS](https://tailwindcss.com/)
+- Routing: [React Router](https://reactrouter.com/en/main)
 - API provider: [News API](https://newsapi.org/)
 - Modals: React Modal 
 
