@@ -5,7 +5,7 @@ type newsProp = {
 };
 const RightSection = (props: newsProp) => {
 	
-	const topNews = props.news?.slice(0, 5);
+	const topNews = props.news;
 	return (
 		<div className="bg-yellow-600">
 			<h1 className="text-4xl text-red-700 font-extrabold text-center underline">TOP NEWS</h1>

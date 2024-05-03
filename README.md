@@ -1,6 +1,7 @@
 # AJ News App - Milestone 2 (RevoU Full Stack Software Engineering Bootcamp)
 AJ News App is a milestone 2 project developed during the RevoU bootcamp. It’s a news application that allows users to explore news articles, filter by category, and search for specific topics. The app is built using React, TypeScript, and integrates with a news API.
 
+Access the App here!
 
 ## Explore news articles
 Articles are fetched from the [News API](https://newsapi.org/) and displayed on the Homepage, Category Pages, and Search Results Page.

@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
 
 	const handleSearch = (query: string) => {
 		setSearchTerm(query);
-		const url = `https://newsapi.org/v2/everything?q=${query}&sortBy=publishedAt&apiKey=${apiKey}`;
+		const url = `https://newsapi.org/v2/everything?q=${query}&sortBy=publishedAt&apiKey=${apiKey}&pageSize=5`;
 		axios
 			.get(url)
 			.then((response) => setArticles(response.data.articles))
@@ -81,7 +81,7 @@ const Navbar: React.FC = () => {
 						<SearchFeature onSearch={handleSearch} />
 						
 					</div>
-					{articles.length > 0 && <SearchResultsList articles={articles.slice(0,5)} />}
+					{articles.length > 0 && <SearchResultsList articles={articles} />}
 				</div>
 			</nav>
 		</div>

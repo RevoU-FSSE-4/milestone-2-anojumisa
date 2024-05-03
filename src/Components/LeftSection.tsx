@@ -17,7 +17,7 @@ interface NewsData {
 	const getNews = async () => {
 		try {
 			const response = await fetch(
-				"https://newsapi.org/v2/top-headlines?country=us&category=politics&apiKey=19d2d58149474e4cb08304a83cbe8ffc"
+				"https://newsapi.org/v2/top-headlines?country=us&category=politics&apiKey=19d2d58149474e4cb08304a83cbe8ffc&pageSize=16"
 			);
 			const json = await response.json();
 			setNews(json.articles);
