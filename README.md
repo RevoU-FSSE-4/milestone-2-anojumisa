@@ -1,7 +1,24 @@
 # AJ News App - Milestone 2 (RevoU Full Stack Software Engineering Bootcamp)
 AJ News App is a milestone 2 project developed during the RevoU bootcamp. It’s a news application that allows users to explore news articles, filter by category, and search for specific topics. The app is built using React, TypeScript, and integrates with a news API.
 
-Access the App here!
+## Installation
+
+1. Clone the Repository:
+```git clone https://github.com/RevoU-FSSE-4/milestone-2-anojumisa.git```
+
+2. Change Directory:
+```cd milestone-2-anojumisa```
+
+3. Install Dependencies:
+```npm install```
+
+    This command installs all the necessary dependencies (libraries) required for the project to run, such as React, Tailwind CSS, and any other dependencies used in the app.
+
+4. Start the Development Server:
+```npm start```
+
+    This command starts a development server that serves the app and automatically reloads the browser whenever you make changes to the code. The app will typically be accessible at http://localhost:3000 (or a port specified in the configuration) in your web browser.
+
 
 ## Explore news articles
 Articles are fetched from the [News API](https://newsapi.org/) and displayed on the Homepage, Category Pages, and Search Results Page.
