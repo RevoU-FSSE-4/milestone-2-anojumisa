@@ -12,7 +12,7 @@ type NewsData = {
 	url: string;
 };
 const url =
-	"https://newsapi.org/v2/top-headlines?country=us&apiKey=19d2d58149474e4cb08304a83cbe8ffc";
+	"https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=19d2d58149474e4cb08304a83cbe8ffc";
 
 const Headline = () => {
 	const [news, setNews] = useState<NewsData | null>(null);
@@ -55,7 +55,7 @@ const Headline = () => {
 						>
 							{news?.title}{" "}
 						</a>
-						<p className="mt-2 text-slate-200 italic">{news?.description} </p>
+						<p className="font-playfair-display mt-2 text-slate-200 italic">{news?.description} </p>
 					</div>
 				</div>
 			)}

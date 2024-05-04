@@ -8,7 +8,7 @@ const RightSection = (props: newsProp) => {
 	const topNews = props.news;
 	return (
 		<div className="bg-yellow-600">
-			<h1 className="text-4xl text-red-700 font-extrabold text-center underline">TOP NEWS</h1>
+			<h1 className=" py-3 text-4xl text-gray-300 font-extrabold text-center underline bg-yellow-700">TOP NEWS</h1>
 			<ul className="flex  max-w text-m text-gray-500 dark:text-gray-400 list-outside">
 				{topNews.map(
 					(
